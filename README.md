@@ -2,6 +2,7 @@ SwearJar
 ========
 
 McHacks W2014 project!
+<<<<<<< HEAD
 
 
 
@@ -29,3 +30,7 @@ django:
 
 
 - [ ] data viz ?????
+=======
+Monitor your cussing
+Donate money or tell ma!
+>>>>>>> 72525d2943fa4927041c3b4159fc32b73fea92d9
