@@ -1,0 +1,10 @@
+manifest.json
+{
+  "name": "SwearJar",
+  "version": "1.0",
+  "description": "My first Chrome extension.",
+  "browser_action": {
+   "default_icon": "icon.png"
+   "popup": "signup.html"
+  }
+}
