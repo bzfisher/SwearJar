@@ -1,19 +1,17 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> c926bc4a58e610a75a45cf0bcd3d21d2c2e245ef
 {
+  "manifest_version": 2,
   "name": "SwearJar",
   "version": "1.0",
   "description": "My first Chrome extension.",
   "homepage_url": "http:google.com/",
   "browser_action": {
-   "default_icon": "icon.png"
-   "popup": "signup.html"
+   "default_icon": "icon.png",
+   "default_popup": "signup.html"
 
-  }
+  },
   "background_page": "background.html",
-  "permisions"[
+  "permisions" [
   		"input"
   "content_scripts": [{
   	"js": ["scanner.js"]
