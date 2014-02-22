@@ -7,7 +7,12 @@
   "homepage_url": "http:google.com/",
   "browser_action": {
    "default_icon": "icon.png",
+<<<<<<< HEAD
    "default_popup": "signup.html"
+=======
+
+   "popup": "signup.html"
+>>>>>>> f0adbaf83be2650178011dd25969dd944ad13742
 
   }//,
 //  "permisions":[
