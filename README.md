@@ -15,6 +15,7 @@ Chrome Extension:
 - [ ] Sign in
 - [ ] Swear word check
 - [ ] Swear Word DB
+- [ ] Stripe
 
 
 Back End
@@ -22,7 +23,7 @@ Back End
 django:
 - [ ] USER MANAGMENT
 - [ ] List of dirty words used for each user
-- [ ] Stripe
+
 - [ ] twilo
 - [ ] Daily notfication
 
