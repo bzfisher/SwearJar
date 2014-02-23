@@ -9,6 +9,21 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
+<<<<<<< HEAD
+	function hack(){
+		alert("success.HTML");
+		$.post("http://107.170.73.156:8001/newuser/"),
+		{name:"username"
+		 password: "password"
+		 phonenumber: "phonenumber"
+		 momsnumber: "momsnumber"},
+		 function(data,status){
+	 		alert("success");
+	 		.fail(function() {
+	 			alert("fail");
+		 }
+	}
+=======
 	$.post("http://107.170.73.156:8001/newUser.html"),
 	{username:"username"
 	 password: "password"
@@ -19,6 +34,7 @@
 	 	.fail(function() {
 	 		alert("error.html");
 	 }
+>>>>>>> 75cb47f000b5f621e47648732e6d5c62ed995fb4
 </script>
 
 <script src="main.js"></script>
@@ -29,14 +45,13 @@
 >>>>>>> c11403b45cd69fcedbe810ac9442542f8d7dd9c6
 </head>
 	<body>
-		<form  name="form1"  action="submit.php"> 
 		<h2 style='text-align: center;'> Sign Up! </h2>
 		<h1.small>
 
-	<form name="input" action="test.asp" method="get">
+	<!-- <form name="input" action="test.asp" method="get">
 		Username: <input type="text" name="username"><br>
-
-	<form name="input" action="newUser" method="post" action="process.asp" action="thanks.html" name="form1">
+ -->
+	<form name="input" action="newUser" method="post">
 		Email: <input type="email" name="email"><br>
 		<br>
 		
@@ -50,8 +65,11 @@
 		<br>
 		Mom's Phone Number: <input type="text" name="momsnumber"><br>
 		<br>
-	<input type="submit" value="Finish">
-
+		<button 
+        	  type="button" 
+        	  name="submit" 
+       	   	  onclick="hack();"
+      	  >Submit</button>
 	</form>
 </h1.small>
 <br>
