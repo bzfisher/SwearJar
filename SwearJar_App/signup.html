@@ -6,16 +6,15 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
-
 	function hack(){
 		var submit = xmlhttp.open("POST","http://107.170.73.156:8001/newuser/",false);
-	var email = document.getElementByName("email");
-	var username = document.getElementByName("username");
-	var password = document.getElementByName("password");
-	var phonenumber = document.getElementByName("phonenumber");
-	var momsnumber = document.getElementByName("momsnumber");
-	var params="email="+email+"&username="+username+"&password="+password+"&phonenumber="+phonenumber+"&momsnumber="+momsnumber;
-	submit.send(params);
+		var email = document.getElementByName("email");
+		var username = document.getElementByName("username");
+		var password = document.getElementByName("password");
+		var phonenumber = document.getElementByName("phonenumber");
+		var momsnumber = document.getElementByName("momsnumber");
+		var params="email="+email+"&username="+username+"&password="+password+"&phonenumber="+phonenumber+"&momsnumber="+momsnumber;
+		submit.send(params);
 		 }
 	
 
@@ -48,9 +47,7 @@
 		<br>
 		Mom's Phone Number: <input type="text" name="momsnumber"><br>
 		<br>
-		<button 
-        	  
-      	  >Submit</button>
+		<button>Submit</button>
 	</form>
 </h1.small>
 <br>
