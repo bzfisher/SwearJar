@@ -52,8 +52,7 @@ def signIn(request):
 		userRequest=request.POST
 		try:
 			user=User.people.get(userName=userRequest["username"])
-			if (user.password == userRequest["password"]):
-				return HttpResponse("success.html") 
+			return (user.password == userRequest["password"]):
 		except Exception:
 			return HttpResponse(False)
 	else:

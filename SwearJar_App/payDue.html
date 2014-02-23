@@ -1,5 +1,17 @@
 <html>
+<head>
+<style>
+body
+{
+background-image:url('src/triangular.png');
+background-repeat:repeat;
+}
+</style></head>
 <body>
+  <script>
+  $.post("http://107.170.73.156:8001/userswore.html"),
+        {username:"username"
+        swearword:"str"},</script>
   <LINK href="style.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
   <div id="mydiv" style="width:100%" align="center">
@@ -12,10 +24,10 @@
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_wC238rH06Sect8FZEBRa8GXX"
-    data-amount="2000"
-    data-name="Demo Site"
-    data-description="2 widgets ($20.00)"
-    data-image="/128x128.png">
+    data-amount="document.write(str)"
+    data-name="Swear Jar"
+    data-description="pay to charity"
+    data-image="icon.png">
   </script>
 </form>
 </div id="center">

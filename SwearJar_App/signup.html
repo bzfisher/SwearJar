@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<head>
+<style>
+body
+{
+background-image:url('src/triangular.png');
+background-repeat:repeat;
+}
+</style></head>
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
@@ -8,7 +16,19 @@
 <script>
 	function hack(){
 		var submit = xmlhttp.open("POST","http://107.170.73.156:8001/newuser/",false);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+		var email = document.getElementByName("email");
+		var username = document.getElementByName("username");
+		var password = document.getElementByName("password");
+		var phonenumber = document.getElementByName("phonenumber");
+		var momsnumber = document.getElementByName("momsnumber");
+		var params="email="+email+"&username="+username+"&password="+password+"&phonenumber="+phonenumber+"&momsnumber="+momsnumber;
+		submit.send(params);
+=======
+>>>>>>> c2c93d46c048153120cb441c760934a2baea3754
 	var email = document.getElementByName("email");
 	var username = document.getElementByName("username");
 	var password = document.getElementByName("password");
@@ -18,6 +38,7 @@
 	submit.send(params);
 	document.cookie="username="+username+"; expires=Thu, 18 Dec 2015 12:00:00 GMT; path=/";
 	document.cookie="count=0; expires=Thu, 18 Dec 2015 12:00:00 GMT; path=/";
+<<<<<<< HEAD
 	var email = document.getElementByName("email");
 		var username = document.getElementByName("username");
 		var password = document.getElementByName("password");
@@ -25,6 +46,10 @@
 		var momsnumber = document.getElementByName("momsnumber");
 		var params="email="+email+"&username="+username+"&password="+password+"&phonenumber="+phonenumber+"&momsnumber="+momsnumber;
 		submit.send(params);
+=======
+
+>>>>>>> c43078d9c268fba08e4718dc613cadfb84657b6e
+>>>>>>> c2c93d46c048153120cb441c760934a2baea3754
 		 }
 	
 
