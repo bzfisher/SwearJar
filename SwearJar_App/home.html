@@ -10,15 +10,18 @@
 	var usr = document.getElementByName("username");
 	var psw = document.getElementByName("password");
 	var params="username="+usr+"&password="+psw;
-	submit.send(params);
+	gotResponse(submit.send(params));
 	}
+  function gotResponse(response){
+  alert(response);
+  }
 </script>
 </head>
 <body>
 	<body>
 		<h2 style='text-align: center;'> Sign In </h2>
 		<h1.small>
-	<form name="input" action="http://107.170.73.156:8001/signin/" onSubmit="onSubmit" method="post">
+	<form name="input" onSubmit="onSubmit" method="post">
 		Username: <input type="text" name="username"><br>
 		<br>
 		Password: <input type="password" name="password"><br>
