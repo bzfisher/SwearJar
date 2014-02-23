@@ -4,6 +4,7 @@ from twilio.rest import TwilioRestClient
 
 
 def send_text(count, user, number):
+
   if (count == 0):
     message = "Congrats, you have a clean mouth!"
   elif (count == 1):
@@ -12,8 +13,8 @@ def send_text(count, user, number):
      cnt = (int(count) / 10.0)
      message = "You swore " + count+" times today. Respond \"Charity\" to donate "+str(cnt)+" dollar(s) to charity, or \"Mom\" to tell your mum what you said"
   # put your own credentials here 
-  ACCOUNT_SID = "AC4220d783a8d422ebec207ae175cdb66a" 
-  AUTH_TOKEN = "3eb988787883305e371fe07c67924869" 
+  ACCOUNT_SID = "XXXXXXX" 
+  AUTH_TOKEN = "XXXXXXX" 
  
   client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN) 
  
