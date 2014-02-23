@@ -13,7 +13,7 @@
   }//,
 //  "permisions":[
 //  		"input"]
-   "default_popup": "signup.html"
+   
 
   }
   //"permisions":[
@@ -22,4 +22,3 @@
   	//"js": ["scanner.js"],
   	//"run_at": "document_start"
   //}]
-}

@@ -4,11 +4,16 @@
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
 </head>
 	<body>
+		<form  name="form1"  action="submit.php"> 
 		<h2 style='text-align: center;'> Sign Up! </h2>
 		<h1.small>
-	<form name="input" action="newUser" method="post">
-		Username: <input type="text" name="username"><br>
+	<form name="input" action="newUser" method="post" action="process.asp" action="thanks.html" name="form1">
+		Email: <input type="email" name="email"><br>
 		<br>
+		
+		Username: <input type="text" name="username"id="username"><br>
+		<br>
+
 		Password: <input type="password" name="password"><br>
 		<br>
 		Your Phone Number: <input type="text" name="phonenumber"><br>
@@ -16,10 +21,24 @@
 		Mom's Phone Number: <input type="text" name="momsnumber"><br>
 		<br>
 	<input type="submit" value="Finish">
+
 	</form>
 </h1.small>
 <br>
-Have an account? <a href="home.html"> Access account </a>	
+Have an account? <a href="home.html"> Access account </a>
+<script type="text/javascript">
+ function saveChanges() {
+        // Get a value saved in a form.
+        var data = document.getElementById('username').value;
+		var file = new File(script.file.parent, 'file.json');
+		print(file);
+		// If file exists, we need to remove it first in order to overwrite its content.
+if (file.exists())
+    file.remove();
+file.open();
+file.write(Json.encode(data));
+file.close();
+      </script>	
 	</body>
 </html>
 
