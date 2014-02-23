@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from swear_jar_core.models import User
 import datetime
 from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import render
 
 
 @csrf_exempt
@@ -22,7 +23,7 @@ def newUser(request):
 def userSwore(request):
 	if request.method == 'POST':
 		userRequest = request.POST
-		user = User.objects.get(userName=userRequest["username"])
+		user = User.people.get(userName=userRequest["username"])
 		swearList = user.swears
 		badWord = userRequest["swearword"]+","
 		user.swears=swearList + badWord
@@ -36,7 +37,7 @@ def userSwore(request):
 def userPaid(request):
 	if request.method == 'POST':
 		userRequest=request.POST
-		user = User.objects.get(userName=userRequest["username"])
+		user = User.people.get(userName=userRequest["username"])
 		user.lastChecked = datetime.datetime.now()
 		user.swearCount = 0
 		user.swears=""
@@ -50,8 +51,9 @@ def signIn(request):
 	if request.method == 'POST':
 		userRequest=request.POST
 		try:
-			user=User.objects.get(userName=userRequest["username"])
-			return HttpResponse(user.password == userRequest["password"]) 
+			user=User.people.get(userName=userRequest["username"])
+			if (user.password == userRequest["password"]):
+				return HttpResponse("success.html") 
 		except Exception:
 			return HttpResponse(False)
 	else:
@@ -60,7 +62,7 @@ def signIn(request):
 @csrf_exempt
 def amountDue(request):
 	if request.method == 'GET':
-		user=User.objects.get(userName=request.GET["username"])
+		user=User.people.get(userName=request.GET["username"])
 		return HttpResponse((user.swearCount)/10.0)
 	else:
 		return HttpResponse(0)
@@ -91,6 +93,7 @@ def send_all(request):
 	for u in User.people.all():
 		send_text(u.swearCount,u.phoneNumber)
 	return HttpResponse(0)
+
 @csrf_exempt
 def send_text_mom(u,request):
 	if not u.swearCount==0:
