@@ -10,7 +10,8 @@ Front End
 =========
 Chrome Extension:
 - [ ] Key Logging
-- [ ] Sign in
+- [X] Sign in
+- [X] Sign up
 - [ ] Swear word check
 - [ ] Swear Word DB
 - [ ] Stripe

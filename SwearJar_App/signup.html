@@ -2,47 +2,30 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
-<<<<<<< HEAD
 
-=======
->>>>>>> c11403b45cd69fcedbe810ac9442542f8d7dd9c6
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
 <<<<<<< HEAD
 	function hack(){
-		alert("success.HTML");
-		$.post("http://107.170.73.156:8001/newuser/"),
-		{name:"username"
-		 password: "password"
-		 phonenumber: "phonenumber"
-		 momsnumber: "momsnumber"},
-		 function(data,status){
-	 		alert("success");
-	 		.fail(function() {
-	 			alert("fail");
+		var submit = xmlhttp.open("POST","http://107.170.73.156:8001/newuser/",false);
+	var email = document.getElementByName("email");
+	var username = document.getElementByName("username");
+	var password = document.getElementByName("password");
+	var phonenumber = document.getElementByName("phonenumber");
+	var momsnumber = document.getElementByName("momsnumber");
+	var params="email="+email+"&username="+username+"&password="+password+"&phonenumber="+phonenumber+"&momsnumber="+momsnumber;
+	submit.send(params);
 		 }
-	}
-=======
-	$.post("http://107.170.73.156:8001/newUser.html"),
-	{username:"username"
-	 password: "password"
-	 phonenumber: "phonenumber"
-	 momsnumber: "momsnumber"},
-	 function(data,status){
-	 	alert("success.html");
-	 	.fail(function() {
-	 		alert("error.html");
-	 }
->>>>>>> 75cb47f000b5f621e47648732e6d5c62ed995fb4
+	
+
+	
+	 
 </script>
 
 <script src="main.js"></script>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> c11403b45cd69fcedbe810ac9442542f8d7dd9c6
 </head>
 	<body>
 		<h2 style='text-align: center;'> Sign Up! </h2>
@@ -51,7 +34,7 @@
 	<!-- <form name="input" action="test.asp" method="get">
 		Username: <input type="text" name="username"><br>
  -->
-	<form name="input" action="newUser" method="post">
+	<form name="input" action="http://107.170.73.156:8001/newuser/" onSubmit="hack" method="post">
 		Email: <input type="email" name="email"><br>
 		<br>
 		
@@ -66,9 +49,7 @@
 		Mom's Phone Number: <input type="text" name="momsnumber"><br>
 		<br>
 		<button 
-        	  type="button" 
-        	  name="submit" 
-       	   	  onclick="hack();"
+        	  
       	  >Submit</button>
 	</form>
 </h1.small>
