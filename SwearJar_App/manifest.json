@@ -6,7 +6,7 @@
   "description": "My first Chrome extension.",
   "homepage_url": "http:google.com/",
   "browser_action": {
-   "default_icon": "icon.png",
+   "default_icon": "logo.png",
    "default_popup": "home.html"
 
 

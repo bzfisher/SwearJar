@@ -4,7 +4,7 @@ from django.db import models
 class User(models.Model):
 	people = models.Manager();
 	swearCount = models.PositiveSmallIntegerField(default=0)
-	phoneNumber = models.CharField(max_length=12, unique=True)
+	phoneNumber = models.CharField(max_length=12, unique=False)
 	momsNumber = models.CharField(max_length=12)
 	userName = models.CharField(max_length=128)
 	lastChecked = models.DateTimeField(auto_now=True)
