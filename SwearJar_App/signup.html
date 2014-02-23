@@ -5,30 +5,32 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
-	$.post("http://107.170.73.156:8001/newUser.html"),
-	{name:"username"
-	 password: "password"
-	 phonenumber: "phonenumber"
-	 momsnumber: "momsnumber"},
-	 function(data,status){
-	 	alert("success.html");
-	 	.fail(function() {
-	 		alert("error.html");
-	 }
+	function hack(){
+		alert("success.HTML");
+		$.post("http://107.170.73.156:8001/newuser/"),
+		{name:"username"
+		 password: "password"
+		 phonenumber: "phonenumber"
+		 momsnumber: "momsnumber"},
+		 function(data,status){
+	 		alert("success");
+	 		.fail(function() {
+	 			alert("fail");
+		 }
+	}
 </script>
 
 <script src="main.js"></script>
 
 </head>
 	<body>
-		<form  name="form1"  action="submit.php"> 
 		<h2 style='text-align: center;'> Sign Up! </h2>
 		<h1.small>
 
-	<form name="input" action="test.asp" method="get">
+	<!-- <form name="input" action="test.asp" method="get">
 		Username: <input type="text" name="username"><br>
-
-	<form name="input" action="newUser" method="post" action="process.asp" action="thanks.html" name="form1">
+ -->
+	<form name="input" action="newUser" method="post">
 		Email: <input type="email" name="email"><br>
 		<br>
 		
@@ -42,8 +44,11 @@
 		<br>
 		Mom's Phone Number: <input type="text" name="momsnumber"><br>
 		<br>
-	<input type="submit" value="Finish">
-
+		<button 
+        	  type="button" 
+        	  name="submit" 
+       	   	  onclick="hack();"
+      	  >Submit</button>
 	</form>
 </h1.small>
 <br>
