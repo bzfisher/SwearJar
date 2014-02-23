@@ -4,22 +4,22 @@
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
-<script>
-	$.post("http://107.170.73.156:8001/signin.html"),
-	{name:"username"
-	 password: "password"},
-	 function(data,status){
-	 	alert("success.html");
-	 	.fail(function() {
-	 		alert("error.html");
-	 }
+<script type='text/javascript'>
+  function onSubmit(){
+	alert("Hello");
+	var submit = xmlhttp.open("POST","http://107.170.73.156:8001/signin/",false);
+	var usr = document.getElementByName("username");
+	var psw = document.getElementByName("password");
+	var params="username="+usr+"&password="+psw;
+	submit.send(params);
+	}
 </script>
 </head>
 <body>
 	<body>
 		<h2 style='text-align: center;'> Sign In </h2>
 		<h1.small>
-	<form name="input" action="SignIn" method="post">
+	<form name="input" action="http://107.170.73.156:8001/signin/" onSubmit="onSubmit" method="post">
 		Username: <input type="text" name="username"><br>
 		<br>
 		Password: <input type="password" name="password"><br>
