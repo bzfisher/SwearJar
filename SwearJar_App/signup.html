@@ -2,11 +2,25 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+	$.post("http://107.170.73.156:8001/newUser.html"),
+	{name:"username"
+	 password: "password"
+	 phonenumber: "phonenumber"
+	 momsnumber: "momsnumber"},
+	 function(data,status){
+	 	alert("success.html");
+	 	.fail(function() {
+	 		alert("error.html");
+	 }
+</script>
 </head>
 	<body>
 		<h2 style='text-align: center;'> Sign Up! </h2>
 		<h1.small>
-	<form name="input" action="newUser" method="post">
+	<form name="input" action="test.asp" method="get">
 		Username: <input type="text" name="username"><br>
 		<br>
 		Password: <input type="password" name="password"><br>
