@@ -7,7 +7,13 @@ function sendMethod(){
 		str= str+word[i];
 	}
 	if(){
-		
+		$.post("http://107.170.73.156:8001/userswore.html"),
+        {username:"username"
+        swearword:"str"},
+        function() {
+            //put count cookie here? 
+        }
+        
 	}
 word.length=0;
 }
