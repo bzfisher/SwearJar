@@ -2,9 +2,24 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        
+    <script type="text/javascript">
+        function write(){
+        var cookie = document.cookie.split(";");
+        var count;
+        var owner;
+        for(var i=0;i<cookie.length;i++){
+            if(cookie[i].trim().indexOf("username")==0)
+			owner= cookie[i].substring("username".length,cookie[i].length);
+            else if(cookie[i].trim().indexOf("count")==0)
+			count= cookie[i].substring("count".length,cookie[i].length);
+        }
+        document.write(count)
+        }
+    </script>
 </head>
 <body>
 Swear Jar is Now Running.
-You have sworn $count$ times so far!
+You have sworn <onWrite()> times so far!
 </body>
 </html>
