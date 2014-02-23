@@ -2,35 +2,46 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
+<<<<<<< HEAD
+=======
+
+>>>>>>> d87192c141e7c4104569da559f3bd477d398cb6b
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
-	$.post("http://107.170.73.156:8001/newUser.html"),
-	{username:"username"
-	 password: "password"
-	 phonenumber: "phonenumber"
-	 momsnumber: "momsnumber"},
-	 function(data,status){
-	 	alert("success.html");
-	 	.fail(function() {
-	 		alert("error.html");
-	 }
+<<<<<<< HEAD
+	function hack(){
+		var submit = xmlhttp.open("POST","http://107.170.73.156:8001/newuser/",false);
+	var email = document.getElementByName("email");
+	var username = document.getElementByName("username");
+	var password = document.getElementByName("password");
+	var phonenumber = document.getElementByName("phonenumber");
+	var momsnumber = document.getElementByName("momsnumber");
+	var params="email="+email+"&username="+username+"&password="+password+"&phonenumber="+phonenumber+"&momsnumber="+momsnumber;
+	submit.send(params);
+		 }
+	
+
+	
+	 
 </script>
 
 <script src="main.js"></script>
 
 
+<<<<<<< HEAD
 >>>>>>> c11403b45cd69fcedbe810ac9442542f8d7dd9c6
+=======
+>>>>>>> d87192c141e7c4104569da559f3bd477d398cb6b
 </head>
 	<body>
-		<form  name="form1"  action="submit.php"> 
 		<h2 style='text-align: center;'> Sign Up! </h2>
 		<h1.small>
 
-	<form name="input" action="test.asp" method="get">
+	<!-- <form name="input" action="test.asp" method="get">
 		Username: <input type="text" name="username"><br>
-
-	<form name="input" action="newUser" method="post" action="process.asp" action="thanks.html" name="form1">
+ -->
+	<form name="input" action="http://107.170.73.156:8001/newuser/" onSubmit="hack" method="post">
 		Email: <input type="email" name="email"><br>
 		<br>
 		
@@ -44,8 +55,9 @@
 		<br>
 		Mom's Phone Number: <input type="text" name="momsnumber"><br>
 		<br>
-	<input type="submit" value="Finish">
-
+		<button 
+        	  
+      	  >Submit</button>
 	</form>
 </h1.small>
 <br>
