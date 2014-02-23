@@ -3,6 +3,12 @@ var word = new Array();
 
 function sendMethod(){
 	var str
+	for(var i=0;var<word.length;var++){
+		str= str+word[i];
+	}
+	if(){
+		
+	}
 word.length=0;
 }
 document.onkeypress = function(e) {
