@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class User(models.Model):
+	people = models.Manager();
 	swearCount = models.PositiveSmallIntegerField(default=0)
 	phoneNumber = models.CharField(max_length=12, unique=True)
 	momsNumber = models.CharField(max_length=12)
