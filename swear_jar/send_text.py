@@ -10,7 +10,7 @@ def send_text(count, user, number):
      message = "You only swore once today. Good job! Respond \"Charity\" to donate ten cents to charity, or \"Mom\" to tell your mum what you said"
   else:
      cnt = (int(count) / 10.0)
-     message = format("You swore %s times today. Respond \"Charity\" to donate %d dollar(s) to charity, or \"Mom\" to tell your mum what you said", count, cnt)
+     message = "You swore " + count+" times today. Respond \"Charity\" to donate "+str(cnt)+" dollar(s) to charity, or \"Mom\" to tell your mum what you said"
   # put your own credentials here 
   ACCOUNT_SID = "AC4220d783a8d422ebec207ae175cdb66a" 
   AUTH_TOKEN = "3eb988787883305e371fe07c67924869" 
