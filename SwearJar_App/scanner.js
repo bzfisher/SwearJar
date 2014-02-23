@@ -8,8 +8,12 @@ function sendMethod(){
 	}
 	if(){
 		$.post("http://107.170.73.156:8001/userswore.html"),
-        {name:"username"
-        swearword:"
+        {username:"username"
+        swearword:"str"},
+        function() {
+            //put count cookie here? 
+        }
+        
 	}
 word.length=0;
 }
