@@ -64,6 +64,7 @@ def amountDue(request):
 		return HttpResponse((user.swearCount)/10.0)
 	else:
 		return HttpResponse(0)
+
 from twilio.rest import TwilioRestClient 
 from django.db import models
  

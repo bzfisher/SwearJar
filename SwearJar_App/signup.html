@@ -16,6 +16,9 @@
 	var momsnumber = document.getElementByName("momsnumber");
 	var params="email="+email+"&username="+username+"&password="+password+"&phonenumber="+phonenumber+"&momsnumber="+momsnumber;
 	submit.send(params);
+	document.cookie="username="+username+"; expires=Thu, 18 Dec 2015 12:00:00 GMT; path=/";
+	document.cookie="count=0; expires=Thu, 18 Dec 2015 12:00:00 GMT; path=/";
+
 		 }
 	
 
