@@ -1,4 +1,22 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+            </script>
+        <script>
+            $.post("http://107.170.73.156:8001/amountdue.html"),
+            {username: //username cookie
+            },
+            function(){
+                var amountdue = data;
+                  }
+        </script>
+</head>
+<body>
+Hi, //usernameFromCookie
+You have sworn //CountFromOtherCookie
+You owe $amountdue
+</body>
 </html>
