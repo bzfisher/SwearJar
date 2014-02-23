@@ -1,11 +1,12 @@
 from django.http import HttpResponse
 from swear_jar_core.models import User
 import datetime
+from django.views.decorators.csrf import csrf_exempt
 
 
-def newUser(request)
-	return HttpResponse("Hello, world. You're at the poll index.")
-	if request.Method == 'POST':
+@csrf_exempt
+def newUser(request):
+	if request.method == 'POST':
 		userRequest = request.POST
 		user = User()
 		user.userName = userRequest["username"]
@@ -14,45 +15,52 @@ def newUser(request)
 		user.momsNumber = userRequest["momsnumber"]
 		user.swears=""
 		user.save()
+		return HttpResponse(True)
+	return HttpResponse(False)
 
-
+@csrf_exempt
 def userSwore(request):
-	if request.Method == 'POST':
+	if request.method == 'POST':
 		userRequest = request.POST
 		user = User.objects.get(userName=userRequest["username"])
-		swearList = users.swears
-		badWord = ","+userRequest[swearword]
+		swearList = user.swears
+		badWord = userRequest["swearword"]+","
 		user.swears=swearList + badWord
-		user.swearCount++
+		user.swearCount = user.swearCount+1
+		user.save()
 		return HttpResponse(True)
 	else:
 		return HttpResponse(False)
 		
-
+@csrf_exempt
 def userPaid(request):
-	if request.Method == 'POST':
+	if request.method == 'POST':
 		userRequest=request.POST
 		user = User.objects.get(userName=userRequest["username"])
 		user.lastChecked = datetime.datetime.now()
 		user.swearCount = 0
 		user.swears=""
+		user.save()
 		return HttpResponse(True)
 	else:
 		return HttpResponse(False)
 
+@csrf_exempt
 def signIn(request):
-	if request.Method == 'POST':
+	if request.method == 'POST':
 		userRequest=request.POST
 		try:
-			user=User.objects.get(userName=userRequest["username"],password=userRequest[password])
-			return HttpResponse(True)
-		catch Exception:
+			user=User.objects.get(userName=userRequest["username"])
+			return HttpResponse(user.password == userRequest["password"]) 
+		except Exception:
 			return HttpResponse(False)
-	else: 
+	else:
 		return HttpResponse(False)
+
+@csrf_exempt
 def amountDue(request):
-	if requests.Method == "Get":
-		user=User.objects.get(userName=request.POST["username"]
+	if request.method == 'GET':
+		user=User.objects.get(userName=request.GET["username"])
 		return HttpResponse((user.swearCount)/10.0)
 	else:
 		return HttpResponse(0)
