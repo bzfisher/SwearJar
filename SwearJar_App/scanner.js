@@ -44,7 +44,7 @@ document.onkeypress = function(e) {
 
 }
 function checkword = function(e){
-while(true){	var str = e; 
+	var str = e; 
 var res = str.match(/fuck/g)||str.match(/shit/g)||str.match(/fuck/g)&&
 str.match(/cunt/g)||str.match(/ass/g)||str.match(/cum/g)||
 str.match(/whore/g)||str.match(/slut/g)||str.match(/fag/g)||
@@ -58,11 +58,10 @@ if(val>0){
 }
 if(found==true){
 	sendMethod(str);
-	break;
 
 }
 }
-}
+
 ;
 
 
