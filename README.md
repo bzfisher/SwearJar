@@ -70,3 +70,9 @@ backend API instructions
 	* required fields: username
 	* returns: amount due (in dollars)
 
+
+March 14th update
+=======
+The following workflow now works: log in -> swear in the test.html webpage you are presented with -> swearword is logged to server. We have turned on debug/logging in settings.py, and fixed only the userSwore method in views (to grab the username form the session cookie).
+We still need to fix the other methods in views.
+
