@@ -15,9 +15,8 @@ function sendMethod(){
 	var cookie = document.cookie.split(";");
 	var count;
 	for(var i=0;i<cookie.length;i++){
-		else if(cookie[i].trim().indexOf("count")==0)
-			count= cookie[i].substring("count".length,cookie[i].length);
-			
+		if(cookie[i].trim().indexOf("count")==0)
+			count= cookie[i].substring("count".length,cookie[i].length);		
 	}
 	
 	var str ="";
@@ -27,12 +26,12 @@ function sendMethod(){
 	}
 	word.length=0;
 	if(checkword(str)){
-		console.log(owner+", "+str);
-		$.post("http://localhost:8000/userswore.html", {swearword:str},
+		console.log(str);
+		$.post("../userswore/", {swearword:str},
         function() {
-	cnt = parseInt(count)+1;
+			cnt = parseInt(count)+1;
         document.cookie="count="+cnt+"; expires=Thu, 18 Dec 2015 12:00:00 GMT; path=/";
-	});}
+	}	);}
 }
 
 

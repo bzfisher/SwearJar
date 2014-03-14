@@ -10,7 +10,8 @@ urlpatterns = patterns('',
     url(r'^userpaid/', views.userPaid, name='userPaid'),
     url(r'^amountdue/', views.amountDue, name='amountDue'),
     url(r'^register/', views.register, name='register'), # ADD NEW PATTERN!
-    url(r'^login/', views.user_login, name='login')
+    url(r'^login/', views.user_login, name='login'),
+        url(r'^login/', views.user_login, name='login')
     # Examples:
     # url(r'^$', 'swear_jar.views.home', name='home'),
     # url(r'^swear_jar/', include('swear_jar.foo.urls')),

@@ -1,15 +1,16 @@
 from django.http import HttpResponse
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-from swearJarApp.models import User
+from swearJarApp.models import UserProfile
 import datetime
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from swearJarApp.forms import UserForm, UserProfileForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
+import logging
 
-
+logger = logging.getLogger(__name__)
 @csrf_exempt
 def register(request):
     # Like before, get the request's context.
@@ -91,7 +92,7 @@ def user_login(request):
                 # If the account is valid and active, we can log the user in.
                 # We'll send the user back to the homepage.
                 login(request, user)
-                return HttpResponseRedirect('/')
+                return render_to_response('swearJarApp/test.html', {}, context)
             else:
                 # An inactive account was used - no logging in!
                 return HttpResponse("Your swearJar account is disabled.")
@@ -107,21 +108,19 @@ def user_login(request):
         # blank dictionary object...
         return render_to_response('swearJarApp/login.html', {}, context)
 
-
-
-
 @csrf_exempt
 def userSwore(request):
-	if request.method == 'POST':
+    logger.error('yayyy!')
+    if request.method == 'POST':
 		userRequest = request.POST
-		user = User.people.get(userName=userRequest["username"])
+		user = UserProfile.objects.get(user=request.user) 
 		swearList = user.swears
 		badWord = userRequest["swearword"]+","
 		user.swears=swearList + badWord
 		user.swearCount = user.swearCount+1
 		user.save()
 		return HttpResponse(True)
-	else:
+    else:
 		return HttpResponse(False)
 		
 @csrf_exempt
