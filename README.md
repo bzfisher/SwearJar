@@ -9,10 +9,9 @@ McHacks W2014 project!
 Front End
 =========
 Chrome Extension:
-- [ ] Key Logging
 - [X] Sign in
 - [X] Sign up
-- [ ] Swear word check
+- [X] Swear word check
 - [ ] Swear Word DB
 - [ ] Stripe
 
@@ -22,14 +21,10 @@ Back End
 django:
 - [x] USER MANAGMENT
 - [x] List of dirty words used for each user
-
 - [ ] twilo
-- [ ] Daily notfication
+- [ ] Daily/weakly notfication
+//- [ ] data viz ?????
 
-
-
-
-- [ ] data viz ?????
 =======
 Monitor your cussing
 Donate money or tell ma!
