@@ -1,0 +1,14 @@
+{
+    "name": "Your website name",
+    "description": "Your website description in 132 characters or less.",
+    "app": {
+        "urls": ["http://107.170.73.156:8001/login/"],
+        "launch": {
+            "web_url": "http://107.170.73.156:8001/login/"
+        }
+    },
+    "manifest_version": 2,
+    "icons": {
+        "128": "icon.png"
+    }
+}

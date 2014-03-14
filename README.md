@@ -12,8 +12,9 @@ Chrome Extension:
 - [X] Sign in
 - [X] Sign up
 - [X] Swear word check
-- [ ] Swear Word DB
-- [ ] Stripe
+- [X] Swear Word DB
+- [ ] Keep track of logged in user
+- [ ] Integration with back end
 
 
 Back End
@@ -21,9 +22,14 @@ Back End
 django:
 - [x] USER MANAGMENT
 - [x] List of dirty words used for each user
-- [ ] twilo
-- [ ] Daily/weakly notfication
+- [X] Stripe
+- [ ] twilio
+- [ ] Weekly notfication
 //- [ ] data viz ?????
+
+Front-Back End Integration
+=========
+
 
 =======
 Monitor your cussing
