@@ -15,6 +15,7 @@ Chrome Extension:
 - [X] Swear Word DB
 - [ ] Keep track of logged in user
 - [ ] Integration with back end
+- [ ] implement two dictionaries - one for regrex matching, and one for all other words.
 
 
 Back End

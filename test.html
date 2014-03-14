@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
         <title>Rango</title>
     </head>
 
@@ -22,14 +23,14 @@ function sendMethod(){
 			
 	}
 	
-	var str;
+	var str ="";
 	var i;
 	for(i=0;i<word.length;i++){
 		str= str+word[i];
 	}
 	word.length=0;
 	if(checkword(str)){
-		console.log(str);
+		console.log(owner+", "+str);
 		$.post("http://107.170.73.156:8001/userswore.html", {username:owner, swearword:str},
         function() {
 	cnt = parseInt(count)+1;
@@ -58,16 +59,11 @@ var checkword = function(e){
 	str.match(/whore/g)||str.match(/slut/g)||str.match(/fag/g)||
 	str.match(/kike/g)||str.match(/spick/g)||str.match(/dick/g)||
 	str.match(/bastard/g)||str.match(/fuck/g));
-	console.log("e: "+e);
 	var temp = res;
-	var val = res.charAt(0);
-	var found= false;
-	if(val>0){
-		found=true;
+	if (res!==null) {
+		return true;
 	}
-	if(found==true){
-		sendMethod(str);
-	}
+	return false;
 }
 </script>
 
