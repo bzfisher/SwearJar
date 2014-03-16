@@ -9,7 +9,7 @@
         }
     },
     "browser_action": {
-        "default_popup": "home.html"
+        "default_popup": "home2.html"
     },
     "manifest_version": 2,
     "icons": {

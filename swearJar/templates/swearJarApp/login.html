@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
         <!-- Is anyone getting tired of repeatedly entering the header over and over?? -->
         <title>Rango</title>
     </head>
 
-    <body>
+    <body background="pinstripe.png">
+        <div padding-left:80px;>
         <h1>Login to SwearJar</h1>
+        </div>
 
-        <form id="login_form" method="post" action="/login/">
-            {% csrf_token %}
-            Username: <input type="text" name="username" value="" size="50" />
-            <br />
-            Password: <input type="password" name="password" value="" size="50" />
-            <br />
+        <form id="login_form" method="post" action="/login/" class="pure-form pure-form-aligned">
+        <fieldset>
 
-            <input type="submit" value="submit" />
+            <!--{% csrf_token %}-->
+             <div class="pure-control-group" >
+
+            Username: <input type="text" name="username" value=""  />
+            </div>
+            <br />
+            <div >
+            Password: <input type="password" name="password" value=""  />
+            <br />
+        </div>
+        <div class="pure-controls" >
+            
+            <label for="cb" class="pure-checkbox">
+                <input id="cb" type="checkbox"> I've read the terms and conditions
+            </label>
+            <div class="pure-controls" >
+             <button type="submit" value="submit"class="pure-button pure-button-primary">Submit</button>
+             <a class="pure-button" href="#">Register</a>
+         </div>
+         </fieldset>
         </form>
 
     </body>
