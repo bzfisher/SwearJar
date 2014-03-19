@@ -1,18 +1,15 @@
 {
-    "name": "Your website name",
-    "description": "Your website description in 132 characters or less.",
-    "version": "1",
-    "app": {
-        "urls": ["http://107.170.73.156:8001/login/"],
-        "launch": {
-            "web_url": "http://107.170.73.156:8001/login/"
-        }
-    },
-    "browser_action": {
-        "default_popup": "home2.html"
-    },
-    "manifest_version": 2,
-    "icons": {
-        "128": "icon.png"
-    }
+  "manifest_version": 2,
+
+  "name": "SwearJar",
+  "description": "This extension demonstrates a browser action with kittens.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://secure.flickr.com/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "home2.html"
+  }
 }
