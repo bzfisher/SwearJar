@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "SwearJar",
+    "description": " tools",
+    "version": "0.1.86",
+   
+    "permissions": ["http://107.170.73.156:8001/*", "tabs", "debugger", "http://*/", "https://*/*", "webNavigation", "storage", "<all_urls>"],
+    
+    "browser_action": {
+    "default_popup": "home2.html"
+    },
+    "background": { "scripts": ["js/background.js"], "persistent": false },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "devtools_page": "devtools.html",
+    
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"], 
+            "js": ["js/content.js"]
+        }
+    ],
+
+    "chrome_url_overrides" : {
+        "newtab": "newtab/newtab.html"
+    
+}
+}
